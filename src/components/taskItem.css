@@ -1,0 +1,40 @@
+.item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 0;
+  padding: 12px 1vw;
+  margin-bottom: 12px;
+  width: 100%;
+  transition: background 0.3s ease;
+}
+
+.item:hover {
+  background: var(--light-green);
+}
+
+.checkbox {
+  width: 20px;
+  height: 20px;
+  accent-color: var(--secondary-green);
+  margin-right: 15px;
+}
+
+.text {
+  flex-grow: 1;
+  font-size: 1.1rem;
+}
+
+.del-btn {
+  background: var(--danger-red);
+  color: white;
+  margin-left: 10px;
+}
+
+.edit-btn {
+  background: var(--primary-blue);
+  color: white;
+  margin-left: 10px;
+}

@@ -1,0 +1,22 @@
+.task-date {
+  text-align: center;
+  background: var(--light-green);
+  padding: 8px;
+  border-radius: 0;
+  min-width: 80px;
+}
+
+.task-date__month {
+  font-weight: bold;
+  color: var(--dark-green);
+}
+
+.task-date__day {
+  font-size: 1.2rem;
+  color: var(--primary-blue);
+}
+
+.task-date__year {
+  font-size: 0.9rem;
+  color: #555;
+}

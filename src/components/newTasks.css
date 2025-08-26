@@ -1,0 +1,8 @@
+.new-task {
+  width: 100vw;
+  padding: 20px 3vw;
+  background: var(--light-blue);
+  border-radius: 0;
+  margin: 0;
+  box-shadow: none;
+}
