@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "./App.css";
 import PendingTasks from "./components/pendingTasks";
 import NewTasks from "./components/newTasks";
@@ -19,7 +19,17 @@ const DUMMY_TASKS = [
 ];
 
 function App() {
-  const [tasks, setTasks] = useState(DUMMY_TASKS);
+  const [tasks, setTasks] = useState(() => {
+    const storedTasks = localStorage.getItem("tasks");
+    return storedTasks
+      ? JSON.parse(storedTasks).map((task) => {
+          return { ...task, date: new Date(task.date) };
+        })
+      : DUMMY_TASKS;
+  });
+  useEffect(() => {
+    localStorage.setItem("tasks", JSON.stringify(tasks));
+  }, [tasks]);
   const taskHandler = (passedData) => {
     console.log("in App");
     setTasks((prevTasks) => {
@@ -65,7 +75,7 @@ function App() {
           <h1 className="title">My-To-Do List</h1>
         </div>
         <div className="header-content">
-        <p className="subtitle">Organize your tasks efficiently</p>
+          <p className="subtitle">Organize your tasks efficiently</p>
         </div>
       </header>
       <PendingTasks

@@ -1,22 +1,22 @@
 .task-date {
+  background: #2196f3;
+  color: white;
+  border-radius: 6px;
+  width: 70px;
   text-align: center;
-  background: var(--light-green);
-  padding: 8px;
-  border-radius: 0;
-  min-width: 80px;
+  padding: 0.4rem 0.2rem;
 }
 
 .task-date__month {
+  font-size: 0.8rem;
   font-weight: bold;
-  color: var(--dark-green);
 }
 
 .task-date__day {
-  font-size: 1.2rem;
-  color: var(--primary-blue);
+  font-size: 1.1rem;
 }
 
 .task-date__year {
-  font-size: 0.9rem;
-  color: #555;
+  font-size: 0.7rem;
+  opacity: 0.9;
 }

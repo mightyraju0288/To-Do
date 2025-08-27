@@ -1,15 +1,21 @@
 .header {
-  background: linear-gradient(to right, var(--primary-blue), var(--secondary-green));
+  width: 100%;
+  min-width: 100%;
+  position: relative; /* ensures no max-width restriction */
+  background: linear-gradient(90deg, #2193b0, #6dd5ed, #38ef7d);
   color: white;
-  padding: 20px;
+  padding: 1.5rem 2rem;
   text-align: center;
-  width: 100vw;
 }
-.title {
-  font-size: 2.5rem;
-  margin-bottom: 5px;
+
+.header-bar .title {
+  margin: 0;
+  font-size: 2.2rem;
 }
-.subtitle {
-  font-size: 1.1rem;
-  opacity: 0.9;
+
+.header-content .subtitle {
+  margin: 0.5rem 0 0;
+  font-weight: 300;
+  font-size: 1.2rem;
+  color: #eefdf5;
 }
